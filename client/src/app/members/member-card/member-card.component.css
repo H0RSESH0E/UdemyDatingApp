@@ -1,0 +1,7 @@
+.card:not(:hover) img {
+    transform: scale(0.8, 0.8);
+    transition-duration: 1500ms;
+    transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+    opacity: 0.8;
+    filter: grayscale(50%);
+}
