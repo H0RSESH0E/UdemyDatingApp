@@ -9,8 +9,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace API.Data.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20220911180620_ExtendedUserEntity")]
-    partial class ExtendedUserEntity
+    [Migration("20220913202222_Hero8")]
+    partial class Hero8
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -24,34 +24,34 @@ namespace API.Data.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
-                    b.Property<string>("City")
+                    b.Property<string>("Alias")
                         .HasColumnType("TEXT");
 
-                    b.Property<string>("Country")
+                    b.Property<string>("Combat")
                         .HasColumnType("TEXT");
 
                     b.Property<DateTime>("Created")
                         .HasColumnType("TEXT");
 
-                    b.Property<DateTime>("DateOfBirth")
+                    b.Property<string>("Durability")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Fullname")
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Gender")
                         .HasColumnType("TEXT");
 
-                    b.Property<string>("Interests")
+                    b.Property<string>("GroupAffiliation")
                         .HasColumnType("TEXT");
 
-                    b.Property<string>("Introduction")
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("KnownAs")
+                    b.Property<string>("Intelligence")
                         .HasColumnType("TEXT");
 
                     b.Property<DateTime>("LastActive")
                         .HasColumnType("TEXT");
 
-                    b.Property<string>("LookingFor")
+                    b.Property<string>("Occupation")
                         .HasColumnType("TEXT");
 
                     b.Property<byte[]>("PasswordHash")
@@ -60,7 +60,25 @@ namespace API.Data.Migrations
                     b.Property<byte[]>("PasswordSalt")
                         .HasColumnType("BLOB");
 
-                    b.Property<string>("UserName")
+                    b.Property<string>("Power")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Publisher")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Race")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Relatives")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Speed")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Strength")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Username")
                         .HasColumnType("TEXT");
 
                     b.HasKey("Id");

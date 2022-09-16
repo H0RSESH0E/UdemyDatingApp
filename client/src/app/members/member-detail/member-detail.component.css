@@ -1,0 +1,57 @@
+.image-wrapper,
+.card-body {
+    position: relative;
+}
+
+.image-wrapper {
+display: flex;
+    justify-content: center;
+}
+.img-thumbnail {
+    margin: 25px;
+    width: 85%;
+    /* height: 85%; */
+}
+
+.card-body {
+    padding: 0 25px;
+}
+
+.hero-stats {
+    font-size: smaller;
+    color: rgba(240, 255, 255, 0.655);
+    padding: 10px;
+    border-radius: 10px;
+    background-color: rgb(0, 0, 0);
+    position: absolute;
+    bottom: 4%;
+    right: 4%;
+    margin-right: auto;
+    margin-left: auto;
+    opacity: 0;
+}
+
+.card-footer {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 8.5%;
+    right: 1%;
+    margin-right: auto;
+    margin-left: auto;
+    opacity: 0.3;
+}
+
+.image-wrapper:hover .hero-stats {
+opacity: 1;
+}
+
+.card-body:hover .card-footer {
+opacity: 1;
+}
+
+
+.animate {
+    transition: all 0.3s ease-in-out;
+}
+

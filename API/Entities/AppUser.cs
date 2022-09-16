@@ -14,16 +14,22 @@ namespace API.Entities
         public byte[] PasswordHash {get; set;}
         public byte[] PasswordSalt { get; set; }
 
-        public DateTime DateOfBirth { get; set; }
-        public string KnownAs {get; set;}
+        public string Race { get; set; }
+        public string Fullname {get; set;}
+        public string Alias {get; set;}
         public DateTime Created {get; set;} = DateTime.Now;
         public DateTime LastActive {get; set;} = DateTime.Now;
         public string Gender { get; set;}
-        public string Introduction { get; set; }
-        public string LookingFor { get; set; }
-        public string Interests { get; set; }
-        public string City { get; set; }
-        public string Country { get; set; }
+        public string Occupation { get; set; }
+        public string Publisher { get; set; }
+        public string GroupAffiliation { get; set; }
+        public string Relatives { get; set; }
+        public string Intelligence { get; set; }
+        public string Strength { get; set; }
+        public string Speed { get; set; }
+        public string Durability { get; set; }
+        public string Power { get; set; }
+        public string Combat { get; set; }
         public ICollection<Photo> Photos { get; set; }
         // public int GetAge()
         // {

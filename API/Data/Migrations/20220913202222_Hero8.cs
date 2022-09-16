@@ -3,18 +3,23 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace API.Data.Migrations
 {
-    public partial class ExtendedUserEntity : Migration
+    public partial class Hero8 : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
+            migrationBuilder.RenameColumn(
+                name: "UserName",
+                table: "Users",
+                newName: "Username");
+
             migrationBuilder.AddColumn<string>(
-                name: "City",
+                name: "Alias",
                 table: "Users",
                 type: "TEXT",
                 nullable: true);
 
             migrationBuilder.AddColumn<string>(
-                name: "Country",
+                name: "Combat",
                 table: "Users",
                 type: "TEXT",
                 nullable: true);
@@ -26,12 +31,17 @@ namespace API.Data.Migrations
                 nullable: false,
                 defaultValue: new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified));
 
-            migrationBuilder.AddColumn<DateTime>(
-                name: "DateOfBirth",
+            migrationBuilder.AddColumn<string>(
+                name: "Durability",
                 table: "Users",
                 type: "TEXT",
-                nullable: false,
-                defaultValue: new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified));
+                nullable: true);
+
+            migrationBuilder.AddColumn<string>(
+                name: "Fullname",
+                table: "Users",
+                type: "TEXT",
+                nullable: true);
 
             migrationBuilder.AddColumn<string>(
                 name: "Gender",
@@ -40,19 +50,13 @@ namespace API.Data.Migrations
                 nullable: true);
 
             migrationBuilder.AddColumn<string>(
-                name: "Interests",
+                name: "GroupAffiliation",
                 table: "Users",
                 type: "TEXT",
                 nullable: true);
 
             migrationBuilder.AddColumn<string>(
-                name: "Introduction",
-                table: "Users",
-                type: "TEXT",
-                nullable: true);
-
-            migrationBuilder.AddColumn<string>(
-                name: "KnownAs",
+                name: "Intelligence",
                 table: "Users",
                 type: "TEXT",
                 nullable: true);
@@ -65,7 +69,43 @@ namespace API.Data.Migrations
                 defaultValue: new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified));
 
             migrationBuilder.AddColumn<string>(
-                name: "LookingFor",
+                name: "Occupation",
+                table: "Users",
+                type: "TEXT",
+                nullable: true);
+
+            migrationBuilder.AddColumn<string>(
+                name: "Power",
+                table: "Users",
+                type: "TEXT",
+                nullable: true);
+
+            migrationBuilder.AddColumn<string>(
+                name: "Publisher",
+                table: "Users",
+                type: "TEXT",
+                nullable: true);
+
+            migrationBuilder.AddColumn<string>(
+                name: "Race",
+                table: "Users",
+                type: "TEXT",
+                nullable: true);
+
+            migrationBuilder.AddColumn<string>(
+                name: "Relatives",
+                table: "Users",
+                type: "TEXT",
+                nullable: true);
+
+            migrationBuilder.AddColumn<string>(
+                name: "Speed",
+                table: "Users",
+                type: "TEXT",
+                nullable: true);
+
+            migrationBuilder.AddColumn<string>(
+                name: "Strength",
                 table: "Users",
                 type: "TEXT",
                 nullable: true);
@@ -104,11 +144,11 @@ namespace API.Data.Migrations
                 name: "Photos");
 
             migrationBuilder.DropColumn(
-                name: "City",
+                name: "Alias",
                 table: "Users");
 
             migrationBuilder.DropColumn(
-                name: "Country",
+                name: "Combat",
                 table: "Users");
 
             migrationBuilder.DropColumn(
@@ -116,7 +156,11 @@ namespace API.Data.Migrations
                 table: "Users");
 
             migrationBuilder.DropColumn(
-                name: "DateOfBirth",
+                name: "Durability",
+                table: "Users");
+
+            migrationBuilder.DropColumn(
+                name: "Fullname",
                 table: "Users");
 
             migrationBuilder.DropColumn(
@@ -124,15 +168,11 @@ namespace API.Data.Migrations
                 table: "Users");
 
             migrationBuilder.DropColumn(
-                name: "Interests",
+                name: "GroupAffiliation",
                 table: "Users");
 
             migrationBuilder.DropColumn(
-                name: "Introduction",
-                table: "Users");
-
-            migrationBuilder.DropColumn(
-                name: "KnownAs",
+                name: "Intelligence",
                 table: "Users");
 
             migrationBuilder.DropColumn(
@@ -140,8 +180,37 @@ namespace API.Data.Migrations
                 table: "Users");
 
             migrationBuilder.DropColumn(
-                name: "LookingFor",
+                name: "Occupation",
                 table: "Users");
+
+            migrationBuilder.DropColumn(
+                name: "Power",
+                table: "Users");
+
+            migrationBuilder.DropColumn(
+                name: "Publisher",
+                table: "Users");
+
+            migrationBuilder.DropColumn(
+                name: "Race",
+                table: "Users");
+
+            migrationBuilder.DropColumn(
+                name: "Relatives",
+                table: "Users");
+
+            migrationBuilder.DropColumn(
+                name: "Speed",
+                table: "Users");
+
+            migrationBuilder.DropColumn(
+                name: "Strength",
+                table: "Users");
+
+            migrationBuilder.RenameColumn(
+                name: "Username",
+                table: "Users",
+                newName: "UserName");
         }
     }
 }

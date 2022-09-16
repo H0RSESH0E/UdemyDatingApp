@@ -3,5 +3,35 @@
     transition-duration: 1500ms;
     transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
     opacity: 0.8;
-    filter: grayscale(50%);
+    filter: grayscale(30%);
+}
+.card img {
+    transform: scale(1.2,1.2);
+    transition-duration: 1000ms;
+    transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+
+}
+
+.card-image-wrapper {
+    overflow: hidden;
+    position: relative;
+}
+
+.member-icons {
+    position: absolute;
+    bottom: -30%;
+    left: 0;
+    right: 0;
+    margin-right: auto;
+    margin-left: auto;
+    opacity: 0;
+}
+
+.card-image-wrapper:hover .member-icons {
+bottom: 0;
+opacity: 1;
+}
+
+.animate {
+    transition: all 0.5s ease-in-out;
 }
