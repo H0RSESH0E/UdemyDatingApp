@@ -53,7 +53,9 @@ namespace API.Controllers
         { 
             loginDto.Username = loginDto.Username.ToLower();
 
-            var user = await _context.Users.FirstOrDefaultAsync(x => x.Username == loginDto.Username);
+            var user = await _context.Users
+            .Include(p => p.Photos)
+            .FirstOrDefaultAsync(x => x.Username == loginDto.Username);
 
             if(user == null) return Unauthorized("Invalid Username or Password");
 
@@ -69,7 +71,8 @@ namespace API.Controllers
             return new UserDto 
             {
                 Username = user.Username,
-                Token = _tokenService.CreateToken(user)
+                Token = _tokenService.CreateToken(user),
+                PhotoUrl = user.Photos.FirstOrDefault(x => x.IsMain)?.Url
             };
                     }
 
